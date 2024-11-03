@@ -1,17 +1,10 @@
 <!DOCTYPE html>
-<html lang="he">
-  <head>
+<html lang="he" dir="rtl">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>אישור הצטרפות לקבוצת ווטסאפ</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+Pro:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet" />
     <style>
       /* רקע דינמי */
       body {
@@ -24,130 +17,79 @@
         margin: 0;
         color: #003366;
         text-align: center;
-        overflow: hidden; /* למנוע גלילה */
-      }
-
-      /* אפקט זיקוקים */
-      .fireworks {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: -1;
         overflow: hidden;
-      }
-
-      .firework {
-        position: absolute;
-        width: 5px;
-        height: 5px;
-        background-color: transparent;
-        border-radius: 50%;
-        box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
-        animation: explode 1.5s ease-out forwards;
-      }
-
-      /* אנימציית התפוצצות של זיקוק */
-      @keyframes explode {
-        0% {
-          opacity: 1;
-          transform: scale(0.5) translateY(0);
-        }
-        100% {
-          opacity: 0;
-          transform: scale(3) translateY(-200px);
-        }
+        direction: rtl; /* כיוון מימין לשמאל */
       }
 
       /* תיבת תוכן עם אפקטים מסביב */
       .container {
-        margin-top: 100px;
         background: rgba(255, 255, 255, 0.8);
         padding: 30px;
         border-radius: 20px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3),
-          0 0 30px rgba(255, 255, 255, 0.5);
-        width: 1000px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), 0 0 30px rgba(255, 255, 255, 0.5);
+        width: 90%;
+        max-width: 600px;
         animation: fadeIn 1.5s ease-in-out;
         position: relative;
+        text-align: center;
       }
 
       /* לוגו של ועד הבית */
       .logo {
-        width: 200px;
-        height: 200px;
+        width: 120px;
+        height: 120px;
         border-radius: 50%;
-        position: absolute;
-        top: -90px;
-        left: 50%;
-        transform: translateX(-50%);
+        margin-top: -60px;
+        margin-bottom: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease-in-out; /* אפקט הגדלה חלק */
+        transition: transform 0.3s ease-in-out;
       }
       .logo:hover {
-        transform: translateX(-50%) scale(1.2); /* הגדלת הלוגו כשהעכבר מעל */
+        transform: scale(1.2);
         box-shadow: 0 0 20px 5px rgba(72, 61, 139, 0.8),
-          /* כחול-סגול כהה */ 0 0 40px 10px rgba(123, 104, 238, 0.6),
-          /* סגול אלגנטי */ 0 0 60px 15px rgba(32, 178, 170, 0.4),
-          /* טורקיז עמוק */ 0 0 80px 20px rgba(70, 130, 180, 0.3); /* כחול מלכותי */
+                    0 0 40px 10px rgba(123, 104, 238, 0.6),
+                    0 0 60px 15px rgba(32, 178, 170, 0.4),
+                    0 0 80px 20px rgba(70, 130, 180, 0.3);
       }
 
       /* כותרות */
       h1 {
-        font-size: 2.8em;
+        font-size: 2.2em;
         color: #002a5c;
-        direction: rtl;
-        margin-top: 0px; /* מרווח ללוגו */
+        margin-top: 0px;
         font-family: "Playfair Display", serif;
       }
 
       h2 {
-        font-size: 2em;
+        font-size: 1.8em;
         color: #003366;
-        direction: rtl;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
+        margin: 0;
         font-family: "Playfair Display", serif;
-      }
-
-      .well {
-        margin-top: 100px;
       }
 
       .info {
         display: flex;
-        justify-content: center;
-        gap: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
         margin-top: 15px;
       }
 
       /* אייקון ווטסאפ אישי */
       .whatsapp-icon {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         cursor: pointer;
-        vertical-align: middle;
-        margin-right: 15px;
-
-        transition: transform 0.3s ease-in-out; /* אפקט הגדלה חלק */
+        margin-right: 10px;
+        transition: transform 0.3s ease-in-out;
       }
 
       .whatsapp-icon:hover {
-        transform: scale(1.5); /* הגדלת לוגו הוואטסאפ כשהעכבר מעל */
-      }
-
-      .wi {
-        margin-top: 20px;
-        margin-bottom: 0px;
+        transform: scale(1.3);
       }
 
       p {
-        direction: rtl;
-        font-size: 1.3em;
+        font-size: 1.2em;
         color: #003366;
         margin: 15px 0;
       }
@@ -155,7 +97,7 @@
       /* כפתור */
       .button {
         display: inline-block;
-        padding: 15px 30px;
+        padding: 10px 25px;
         font-size: 1.2em;
         color: #ffffff;
         background-color: #003366;
@@ -173,79 +115,58 @@
 
       /* אפקט של כניסת התוכן */
       @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
+        from { opacity: 0; }
+        to { opacity: 1; }
       }
 
-      /* אזור יצירת קשר */
-      .contact-info {
-        font-size: 1em;
-        color: #003366;
-        margin-top: 20px;
-        direction: rtl;
-      }
+      /* אפקט רספונסיבי */
+      @media (max-width: 768px) {
+        .logo {
+          width: 100px;
+          height: 100px;
+        }
 
-      .highlight {
-        color: #004080;
-        font-weight: bold;
-      }
-      .info_one {
-        display: block;
-      }
-      .in {
-        margin-left: 100px;
-      }
-      a {
-        color: white;
+        h1 { font-size: 1.8em; }
+        h2 { font-size: 1.5em; }
+
+        .button {
+          font-size: 1em;
+          padding: 10px 20px;
+        }
+
+        .whatsapp-icon {
+          width: 35px;
+          height: 35px;
+        }
+
+        .container {
+          padding: 20px;
+        }
       }
     </style>
-  </head>
-  <body>
-    <!-- אזור זיקוקים -->
-    <div class="fireworks"></div>
-
+</head>
+<body>
     <div class="container">
-      <!-- לוגו של ועד הבית (החלף בכתובת של הלוגו שלך) -->
+      <!-- לוגו של ועד הבית -->
       <img src="64.jpeg" alt="לוגו ועד הבית" class="logo" />
-      <div>
-        <h1 class="well">ברוכים הבאים</h1>
-        <h2>לקבוצת הוואטסאפ של דיירי בניין</h2>
-        <h1>64</h1>
-      </div>
+
+      <h1>ברוכים הבאים</h1>
+      <h2>לקבוצת הוואטסאפ של דיירי בניין 64</h2>
 
       <p>לקבלת עדכונים, מידע ושמירה על קשר עם ועד הבית.</p>
-      <button class="button" onclick="approve()">
-        להצטרפות לקבוצה לחץ כאן
-      </button>
+      <button class="button" onclick="approve()">להצטרפות לקבוצה לחץ כאן</button>
 
       <div class="contact-info">
         <p>לפרטים נוספים ויצירת קשר עם ועד הבית:</p>
         <div class="info">
-          <div class="in">
-            <p><strong>שם נציג הועד: </strong></p>
-            <p>אבי ברודצקי</p>
-          </div>
-          <div class="in">
-            <p><strong>טלפון: </strong></p>
-            <p>054-5665166</p>
-          </div>
-          <div>
-            <p><strong>אימייל: </strong></p>
-            <p>Avib660@gmail.com</p>
-          </div>
+          <p><strong>שם נציג הועד:</strong> אבי ברודצקי</p>
+          <p><strong>טלפון:</strong> 054-5665166</p>
+          <p><strong>אימייל:</strong> Avib660@gmail.com</p>
         </div>
-        <p class="wi">
-          <strong>לוואצאפ האישי שלי</strong
-          ><a href="https://wa.me/+972545665166" target="_blank">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png"
-              alt="ווטסאפ אישי"
-              class="whatsapp-icon"
-            />
+        <p>
+          <strong>לוואצאפ האישי שלי:</strong>
+          <a href="https://wa.me/+972545665166" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="ווטסאפ אישי" class="whatsapp-icon" />
           </a>
         </p>
       </div>
@@ -253,19 +174,14 @@
 
     <script>
       function approve() {
-        // לינק לקבוצת ווטסאפ
-        const whatsappLink = "https://chat.whatsapp.com/BCuQA4UZQqoHrM7GQ5nlsT"; // החלף בקישור לקבוצה שלך
-        // ניתוב למשתמש
+        const whatsappLink = "https://chat.whatsapp.com/BCuQA4UZQqoHrM7GQ5nlsT"; 
         window.location.href = whatsappLink;
       }
 
-      // יצירת אפקט זיקוקים - לפי קוד קודם
       function createFirework() {
         const firework = document.createElement("div");
         firework.className = "firework";
-        firework.style.backgroundColor = `hsl(${
-          Math.random() * 360
-        }, 100%, 50%)`;
+        firework.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
         firework.style.left = `${Math.random() * 100}vw`;
         firework.style.top = `${Math.random() * 100}vh`;
         firework.style.animationDuration = `${Math.random() * 1 + 1.5}s`;
@@ -278,5 +194,5 @@
 
       setInterval(createFirework, 500);
     </script>
-  </body>
+</body>
 </html>
